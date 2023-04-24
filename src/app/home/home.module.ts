@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 const routes: Routes = [
   {
@@ -40,12 +41,14 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
     HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
     HttpClientModule,
+    NgbCarouselModule
   ],
 })
 export class HomeModule {}
