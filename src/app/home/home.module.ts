@@ -5,6 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const routes: Routes = [
   {
@@ -33,6 +36,10 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule,
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
 })
 export class HomeModule {}
