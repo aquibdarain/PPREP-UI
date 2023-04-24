@@ -8,8 +8,11 @@ import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 const routes: Routes = [
+  {
+    path: 'components',
+    loadChildren: () => import('./components/components.module').then((m) => m.ComponentsModule),
+  },
   {
     path: 'signup',
     component: SignupComponent,
@@ -36,10 +39,11 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
   ],
-  imports: [CommonModule,
+  imports: [
+    CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
 })
 export class HomeModule {}
