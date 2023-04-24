@@ -5,7 +5,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { TechnicalComponent } from './technical/technical.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AptitudeComponent } from './aptitude/aptitude.component'; 
+import { AptitudeComponent } from './aptitude/aptitude.component';
 
 import { Routes, RouterModule } from '@angular/router';
 
