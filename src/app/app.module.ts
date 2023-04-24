@@ -18,12 +18,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule
-<<<<<<< HEAD
-=======
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
->>>>>>> 164a717bbbd3f81f68cab69f0f83b72a42f4b9bd
   ],
   providers: [],
   bootstrap: [AppComponent]
