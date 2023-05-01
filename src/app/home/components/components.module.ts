@@ -11,8 +11,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { TcsComponent } from './blogComponent/tcs/tcs.component';
 import { CognizantComponent } from './blogComponent/cognizant/cognizant.component';
 import { MicrosoftComponent } from './blogComponent/microsoft/microsoft.component';
-
+import { ApplyJobsComponent } from './apply-jobs/apply-jobs.component';
+import { ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'user',
+    pathMatch: 'full',
+  },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -46,6 +52,10 @@ const routes: Routes = [
   },
   {
     path:'microsoftBlog', component: MicrosoftComponent
+  },
+  // jobs
+  {
+    path:'applyJob',component: ApplyJobsComponent
   }
 ];
 
@@ -60,7 +70,8 @@ const routes: Routes = [
     TcsComponent,
     CognizantComponent,
     MicrosoftComponent,
+    ApplyJobsComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes),ReactiveFormsModule],
 })
 export class ComponentsModule {}

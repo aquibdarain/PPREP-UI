@@ -1,31 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { error } from 'console';
 import { JobsService } from 'src/app/service/jobs.service';
 
+
 @Component({
-  selector: 'app-jobs',
-  templateUrl: './jobs.component.html',
-  styleUrls: ['./jobs.component.scss']
+  selector: 'app-apply-jobs',
+  templateUrl: './apply-jobs.component.html',
+  styleUrls: ['./apply-jobs.component.scss']
 })
-export class JobsComponent implements OnInit {
+export class ApplyJobsComponent implements OnInit {
 
-  constructor(private jobSer: JobsService, private router: Router) {
-    this.getAllJobs()
-  }
+  constructor(private jobSer: JobsService, private router: Router) { }
 
-  ngOnInit(): void { }
-
-  jobData: any = [];
-
-  getAllJobs() {
-    this.jobSer.getJobs().subscribe((success) => {
-      console.log(success);
-      this.jobData = success;
-    }, (error) => {
-      console.log(error);
-    })
+  ngOnInit(): void {
   }
 
 
@@ -39,7 +27,8 @@ export class JobsComponent implements OnInit {
     resume: new FormControl(),
   });
 
-  applyOnJobs() {
+
+  jobApply() {
     let obj:any=[];
     obj = this.jobForm.value;
     this.jobSer.applyOnJob(obj).subscribe((success)=>{

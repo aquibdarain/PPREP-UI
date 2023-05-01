@@ -1,0 +1,74 @@
+<app-dashboard></app-dashboard>
+
+<div class="container pt-5">
+  <div class="card shadow">
+    <div class="card-header ps-3">Job Registration Form</div>
+    <div class="card-body">
+      <form [formGroup]="jobForm">
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-id-card" aria-hidden="true"></i> &nbsp; <label>Name</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="fullName" class="form-control" placeholder="enter your name" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-phone-square" aria-hidden="true">&nbsp;</i> <label>Address</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="address" class="form-control"
+              placeholder="enter your address" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;<label>Contact</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="contact" class="form-control" placeholder="enter your contact" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-birthday-cake" aria-hidden="true"></i> &nbsp; <label>Email</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="email" class="form-control" placeholder="enter your email" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-link" aria-hidden="true"></i> &nbsp; <label>Applied Position</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="appliedPosition" class="form-control" placeholder="enter the position" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-link" aria-hidden="true"></i> &nbsp; <label>Job Location</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="jobLocation" class="form-control" placeholder="enter your preferred location" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-2">
+            <i class="fa fa-link" aria-hidden="true"></i>&nbsp; <label>Resume</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" formControlName="resume" class="form-control" placeholder="enter your resume url" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-sm btn-success" (click)="jobApply()" routerLink="../job">
+        Submit
+      </button>
+      &nbsp;
+    </div>
+  </div>
+</div>
